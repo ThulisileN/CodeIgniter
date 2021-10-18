@@ -67,5 +67,6 @@ $route['default_controller'] = 'pages/view';
 $route['todo/edit/(:any)'] = 'todo/edit/$1';
 $route['todo/update/(:any)']['put'] = 'todo/update/$1';
 $route['todo/delete/(:any)']['delete'] = 'todo/delete/$1';
+$route['/'] = 'todo/index';
 
 $route['validation'] = 'Form';
