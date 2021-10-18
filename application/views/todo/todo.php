@@ -27,7 +27,7 @@
 						<form action="<?php echo site_url('todo/delete/'.$task['id']); ?>" method="delete">
 							<button formaction="<?php echo site_url('todo/edit/'.$task['id']); ?>" class="btn btn-xs btn-primary">Edit</button>
 							
-							<button onclick="return confirm('Are you sure to delete data?')" type ="submit" class="btn btn-xs btn-danger">Delete</button>
+							<button onclick="return confirm('Are you sure to delete data?')" name="delete" type ="submit" class="btn btn-xs btn-danger">Delete</button>
 							</form>
 						</td>
 					</tr>

@@ -25,7 +25,7 @@
 				</tr>
 				<tr>
 					<td colspan="2">
-						<input type="submit" class="btn btn-danger" value="Add Task" />
+						<input name="add" type="submit" class="btn btn-danger" value="Add Task" />
 					</td>
 				</tr>
 			</table>

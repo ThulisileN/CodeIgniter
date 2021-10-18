@@ -9,15 +9,35 @@ class FirstCest
     // tests
     public function tryToTest(AcceptanceTester $I)
     {
-        $I->amOnPage('/todo/index');
-        $I->see('To-Do List 3');
+        /*$I->amOnPage('/todo/index');
+        $I->see('To-Do List 4');*/
     }
 
+    //Add Task
     public function addTask(AcceptanceTester $I)
     {
-        $I->amOnPage('/todo/add?');
+        /*$I->amOnPage('/todo/add?');
         $I->see('Add Todo List');
-        $I->fillField('task_title', 'Task 4');
-        //$I->click(['btn' => 'submit']);
+        //Add task
+        $I->fillField('task_title', 'Task 3');
+        $I->click(['name' => 'add']);*/
+    }
+    
+    //Update Task
+    public function updateTask(AcceptanceTester $I)
+    {
+        $I->amOnPage('/todo/edit/14?');
+        $I->see('Edit Todo List');
+        $I->fillField('task_status','completed'); // Change the task status to completed
+        $I->fillField('task_title','Task 2'); // Change the task title to completed
+        $I->click(['name' => 'update']);
+    }
+
+    //delete task
+    public function deleteTask(AcceptanceTester $I)
+    {
+        /*$I->amOnPage('/todo/index/11?');
+        $I->see('To-Do List');
+        $I->click(['name' => 'delete']);*/
     }
 }
