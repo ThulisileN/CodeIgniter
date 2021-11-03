@@ -2,7 +2,8 @@
 <html>
 <head>
 	<title><?php echo $page_title; ?></title>
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url('public/bootstrap.min.css') ?>" />
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
 	<div class="container">
@@ -27,7 +28,7 @@
 						<form action="<?php echo site_url('todo/delete/'.$task['id']); ?>" method="delete">
 							<button formaction="<?php echo site_url('todo/edit/'.$task['id']); ?>" class="btn btn-xs btn-primary">Edit</button>
 							
-							<button onclick="return confirm('Are you sure to delete data?')" name="delete" type ="submit" class="btn btn-xs btn-danger">Delete</button>
+							<button onclick="return confirm('Are you sure you want to delete the task?')" name="delete" type ="submit" class="btn btn-xs btn-danger">Delete</button>
 							</form>
 						</td>
 					</tr>

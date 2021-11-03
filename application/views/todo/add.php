@@ -2,11 +2,12 @@
 <html>
 <head>
 	<title><?php echo $page_title; ?></title>
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url('public/bootstrap.min.css') ?>" />
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
 	<div class="container">
-		<h1 class="page-header">Add Todo List 
+		<h1 class="page-header">Add Task To Todo List 
 			<form><button formaction="<?php echo site_url('todo/index'); ?>" class="btn btn-sm btn-danger pull-right">Task List</button></form>
 		</h1>
 		<p>

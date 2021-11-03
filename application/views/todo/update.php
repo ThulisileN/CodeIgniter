@@ -3,7 +3,8 @@
 
 <head>
     <title>Edit Todo List></title>
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url('public/bootstrap.min.css') ?>" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 
 <body>
@@ -23,7 +24,8 @@
         
             <input type="title" name="task_title" value="<?php echo $content->task_title; ?>">
             <input type="status" name="task_status" value="<?php echo $content->task_status; ?>">
-            <button name="update" type="submit" class="btn btn-danger">Submit</button> 
+        <br></br>
+            <button onclick="return confirm('Are you sure to you want to update the task?')" name="update" type="submit" class="btn btn-danger">Update Task</button> 
             
         </form>
     </div>
