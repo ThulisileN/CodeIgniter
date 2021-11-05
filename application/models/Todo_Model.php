@@ -38,6 +38,7 @@ class Todo_Model extends CI_Model{
 	function add(){
 		$insertData=array(
 			'task_title'=>$this->input->post('task_title'),
+			'task_description'=>$this->input->post('task_description'),
 			'task_status'=>'pending'
 		);
 		$insertQuery=$this->db->insert('todo_list',$insertData);
@@ -50,8 +51,10 @@ class Todo_Model extends CI_Model{
 
 	function find_content($id){
 		$task = $this->db->get_where('todo_list',array('id'=>$id))->row();
+		$description = $this->db->get_where('todo_list',array('id'=>$id))->row();
 		$status = $this->db->get_where('todo_list',array('id'=>$id))->row();
 		return $task;
+		return $description;
 		return $status;
 	}
 	/*// Update Data
@@ -72,6 +75,7 @@ class Todo_Model extends CI_Model{
 	public function update($id){
 		$data = array(
 			'task_title' => $this->input->post('task_title'),
+			'task_description' => $this->input->post('task_description'),
 			'task_status' => $this->input->post('task_status')
 		);
 

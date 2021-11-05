@@ -9,11 +9,13 @@
 	<div class="container">
 		<h1 class="page-header">To-Do List 
 			<span class="badge"><?php echo $totalResult; ?></span> <br></br>
-			<form><button formaction="<?php echo site_url('todo/add'); ?>" class="btn btn-sm btn-danger pull-right">Add Task</button></form>
+			<form><button formaction="<?php echo site_url('todo/add'); ?>" class="btn btn-sm btn-success pull-left">Add Task</button></form>
+			
 		</h1>
 		<table class="table table-striped table-bordered">
 			<tr>
 				<th>Task</th>
+				<th>Description</th>
 				<th>Status</th>
 				<th>Action</th>
 			</tr>
@@ -23,10 +25,11 @@
 					?>
 					<tr>
 						<td><?php echo $task['task_title']; ?></td>
+						<td><?php echo $task['task_description']; ?></td>
 						<td><?php echo $task['task_status']; ?></td>
 						<td>
 						<form action="<?php echo site_url('todo/delete/'.$task['id']); ?>" method="delete">
-							<button formaction="<?php echo site_url('todo/edit/'.$task['id']); ?>" class="btn btn-xs btn-primary">Edit</button>
+							<button formaction="<?php echo site_url('todo/edit/'.$task['id']); ?>" class="btn btn-xs btn-primary">Update</button>
 							
 							<button onclick="return confirm('Are you sure you want to delete the task?')" name="delete" type ="submit" class="btn btn-xs btn-danger">Delete</button>
 							</form>
@@ -45,6 +48,7 @@
 			}
 			?>
 		</table>
+		<form><button onclick="return confirm('Are you sure you want to logout?')" formaction="<?php echo site_url('todo/login'); ?>" class="btn btn-sm btn-danger pull-right">Logout</button></form>
 	</div>
 </body>
 </html>

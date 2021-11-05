@@ -8,7 +8,7 @@
 <body>
 	<div class="container">
 		<h1 class="page-header">Add Task To Todo List 
-			<form><button formaction="<?php echo site_url('todo/index'); ?>" class="btn btn-sm btn-danger pull-right">Task List</button></form>
+			<form><button formaction="<?php echo site_url('todo/index'); ?>" class="btn btn-sm btn-info pull-right">Task List</button></form>
 		</h1>
 		<p>
 			<?php
@@ -23,10 +23,11 @@
 				<tr>
 					<th>Add Task</th>
 					<td><input type="text" class="form-control" name="task_title" /></td>
+					<td><input type="text" class="form-control" name="task_description" /></td>
 				</tr>
 				<tr>
 					<td colspan="2">
-						<input name="add" type="submit" class="btn btn-danger" value="Add Task" />
+						<input name="add" type="submit" class="btn btn-success" value="Add Task" />
 					</td>
 				</tr>
 			</table>

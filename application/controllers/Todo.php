@@ -33,6 +33,16 @@ class Todo extends CI_Controller {
 			$data['msg']=$dbRes;
 		}
 		}
+		$this->form_validation->set_rules('task_descsription','Task Description','trim|required');
+		if($this->form_validation->run()===true){
+			// Submit Form
+		$this->form_validation->set_rules('task_description','Task Description','trim|required');
+		if($this->form_validation->run()===true){
+			// Process the data
+			$dbRes=$this->Todo_Model->add();
+			$data['msg']=$dbRes;
+		}
+		}
 		$this->load->view('todo/add.php',$data);
 	} 
     public function edit($id) {
@@ -46,6 +56,7 @@ class Todo extends CI_Controller {
         //Updates the task
     public function update($id){
         $this->form_validation->set_rules('task_title','Task Title','trim|required');
+		$this->form_validation->set_rules('task_description','Task Description','trim|required');
         $this->form_validation->set_rules('task_status','Task Status','trim|required');
 
         if($this->form_validation->run()===TRUE){
@@ -58,5 +69,16 @@ class Todo extends CI_Controller {
 	function delete($id){
 		$dbRes=$this->Todo_Model->delete($id);
 		redirect(site_url('todo/index'));
+	}
+	//Login
+	function login() {
+		$this->form_validation->set_rules('user_name','Username','trim|required');
+        $this->form_validation->set_rules('password','Password','trim|required');
+		$this->load->view('todo/login');
+	}
+	//Signup
+	function signup() {
+	
+		$this->load->view('todo/signup');
 	}
 }
