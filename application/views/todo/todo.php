@@ -8,10 +8,11 @@
 <body>
 	<div class="container">
 		<h1 class="page-header">To-Do List 
-			<span class="badge"><?php echo $totalResult; ?></span> <br></br>
 			<form><button formaction="<?php echo site_url('todo/add'); ?>" class="btn btn-sm btn-success pull-left">Add Task</button></form>
-			
 		</h1>
+		<h5>Number of Tasks
+		<span class="badge"><?php echo $totalResult; ?></span> <br></br>
+		</h5>
 		<table class="table table-striped table-bordered">
 			<tr>
 				<th>Task</th>
