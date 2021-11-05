@@ -34,7 +34,7 @@ exit;
 	<h1>Task List</h1>
     <h1>Login</h1>
 	<div class="col-md-6">
-<label for="uname">UserName:</label>
+<label for="uname">Username:</label>
 <input type="text" class="form-control" id="username" placeholder="Enter username" name="Username"><br><br>
 <label for="password">Password:</label>
 <input type="password" class="form-control" id="password" placeholder="Enter password" name="Password" name="password"><br><br>

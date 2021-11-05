@@ -6,12 +6,6 @@ class Login extends CI_Controller {
 		parent::__construct();
 	}
 	
-	
-	function index() {
-	
-		$this->load->view('todo/register');
-	}
-	
 	function run()
 	{
 		$this->model->run();

@@ -22,8 +22,11 @@
 			<table class="table table-striped table-bordered">
 				<tr>
 					<th>Add Task</th>
-					<td><input type="text" class="form-control" name="task_title" /></td>
-					<td><input type="text" class="form-control" name="task_description" /></td>
+					<td><input type="text" class="form-control" placeholder="Enter task title"  name="task_title" /></td>
+					<td><input type="text" class="form-control" placeholder="Add task description"  name="task_description" /></td>
+				</tr>
+				<tr>
+					
 				</tr>
 				<tr>
 					<td colspan="2">

@@ -76,9 +76,4 @@ class Todo extends CI_Controller {
         $this->form_validation->set_rules('password','Password','trim|required');
 		$this->load->view('todo/login');
 	}
-	//Signup
-	function signup() {
-	
-		$this->load->view('todo/signup');
-	}
 }

@@ -22,18 +22,6 @@ class Todo_Model extends CI_Model{
 		}
 		return $response;
 	}
-	/*// Get single list
-	function get_single_list(){
-		$response=array();
-		$query=$this->db->get('todo_list');
-		if($query->num_rows()>0){
-			$response['bool']=true;
-			$response['d']=$query->result_array();
-		}else{
-			$response['bool']=false;
-		}
-		return $response;
-	}*/
 
 	function add(){
 		$insertData=array(
@@ -42,11 +30,7 @@ class Todo_Model extends CI_Model{
 			'task_status'=>'pending'
 		);
 		$insertQuery=$this->db->insert('todo_list',$insertData);
-		/*if($this->db->affected_rows()>0){
-			return 'Data has been added';
-		}else{
-			return 'Data has not been added';
-		}*/
+	
 	}
 
 	function find_content($id){
@@ -57,21 +41,6 @@ class Todo_Model extends CI_Model{
 		return $description;
 		return $status;
 	}
-	/*// Update Data
-	function update($id){
-		$updateData=array(
-			'task_title'=>$this->input->post('task_title'),
-			'task_status'=>'pending'
-		);
-		$this->db->where('id',$id);
-		$updateQuery=$this->db->update('todo_list',$updateData);
-		if($this->db->affected_rows()>0){
-			return 'Data has been updated';
-		}else{
-			return 'Data has not been updated';
-		}
-	}*/
-
 	public function update($id){
 		$data = array(
 			'task_title' => $this->input->post('task_title'),
@@ -84,9 +53,6 @@ class Todo_Model extends CI_Model{
 	}
 	// Delete Data
 	function delete($id){
-		/*$res=array();
-		$this->db->where('id',$id);
-		$this->db->delete('todo_list');*/
 
 		return $this->db->delete('todo_list', array('id' => $id));
 	}
